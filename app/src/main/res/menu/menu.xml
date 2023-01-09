@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/page1"
+        android:enabled="true"
+        android:iconTint="#E40C0C"
+        android:icon="@drawable/icon_select_page1"
+        android:title="page1">
+    </item>
+    <item android:id="@+id/page2"
+        android:enabled="true"
+        android:icon="@drawable/icon_select_page2"
+        android:title="page2">
+
+    </item>
+    <item android:id="@+id/page3"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_web"
+        android:title="page3">
+
+    </item>
+    <item android:id="@+id/page4"
+        android:enabled="true"
+        android:icon="@drawable/icon_select_page4"
+        android:title="page4">
+
+    </item>
+    <item android:id="@+id/page5"
+        android:enabled="true"
+        android:icon="@drawable/icon_select_page5"
+        android:title="page5">
+
+    </item>
+
+</menu>

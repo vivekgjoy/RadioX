@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">RadioX</string>
+    <string name="above_text">Havana.Camila Cabell - Camila</string>
+    <string name="scroll_text">You/re part of the team now, and we know you/ll do great things here. Warmest of welcomes!!!</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="kntu">KNTU 100.2</string>
+    <string name="desc">K</string>
+    <string name="favotites">Favourites</string>
+    <string name="selected_item">Selected item:</string>
+    <string name="send_to">Hi Everyone... welcome to HD Radio</string>
+    <string name="channel_number">100.0</string>
+    <string name="hd_channel_number">KNTU 97.4 | HD1</string>
+    <string name="album_name_attistname">Album Name | AttistName</string>
+    <string name="fragment_view">Fragment View</string>
+    <string name="alert_notes">Do not drink and drive Always wear a helmet! Keep a safe distance from vehicles!</string>
+    <string name="alert_button">ok</string>
+    <string name="music_artists">Music Artists</string>
+    <string-array name="Languages">
+        <item>Artist/Yuvan</item>
+        <item>Artist/Arrahuman</item>
+        <item>Artist/Shreya</item>
+        <item>Artist/Hariharan</item>
+    </string-array>
+
+
+</resources>

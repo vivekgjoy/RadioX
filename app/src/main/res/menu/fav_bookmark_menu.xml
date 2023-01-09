@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/favorite_button"
+        android:enabled="true"
+        android:icon="@drawable/icon_select_favorite"
+        android:title="favPage">
+
+    </item>
+    <item android:id="@+id/book_markPage"
+        android:enabled="true"
+        android:icon="@drawable/icon_select_bookmark"
+        android:title="bookmarkPage">
+
+    </item>
+</menu>

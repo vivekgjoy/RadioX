@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/home_Background"
+    android:layout_gravity="top">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_Background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        >
+
+        <TextView
+            android:id="@+id/channelNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/hd_channel_number"
+            android:paddingVertical="8dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/camila_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/channelImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/deleteFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview_id"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="#292626"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/ic_baseline_delete_forever_24"
+            android:textColor="@color/camila_text" />
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

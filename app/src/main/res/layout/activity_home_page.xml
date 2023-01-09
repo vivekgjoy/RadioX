@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="@color/home_Background"
+    tools:context=".activity.HomePageActivity">
+
+    <include
+        android:id="@+id/radio_toolbar"
+        layout="@layout/my_toolbar" />
+
+    <TextView
+        android:id="@+id/scrollText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/scroll_text"
+        android:backgroundTint="#FF0000"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/scroll_barlayout"
+        android:layout_width="330dp"
+        android:layout_height="565dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/cardview_layout"
+        android:backgroundTint="@color/card_Background"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollText">
+
+        <TextView
+            android:id="@+id/frequency_name"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/kntu"
+            android:textColor="@color/camila_text"
+            android:textStyle="bold" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/left_move_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview_id"
+            android:layout_marginStart="1dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginTop="65dp"
+            android:backgroundTint="#292626"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/left_arrow"
+            android:textColor="@color/camila_text" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/right_move_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview_id"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="65dp"
+            android:backgroundTint="#292626"
+            android:layout_marginEnd="1dp"
+            android:layout_gravity="bottom|right"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/right_arrow"
+            android:textColor="@color/camila_text" />
+
+        <LinearLayout
+            android:id="@+id/favorite_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fav_background"
+            android:layout_below="@+id/scroll_bar"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:drawablePadding="7dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favotites"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textColor="@color/camila_text"
+                android:drawablePadding="5dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/favorite_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_baseline_thumb_up"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bookmark_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fav_background"
+            android:layout_below="@+id/scroll_bar"
+            android:layout_marginStart="167dp"
+            android:layout_marginTop="25dp"
+            android:drawablePadding="7dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bookmark"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textColor="@color/camila_text"
+                android:drawablePadding="5dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/bookmark_Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/icon_select_bookmark"
+                />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/scroll_bar"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="380dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tunebarRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/tunebar_Background"
+                    android:orientation="horizontal"
+                    app:reverseLayout="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <View
+                    android:id="@+id/tuner_line"
+                    android:layout_width="2dp"
+                    android:layout_height="120dp"
+                    android:layout_alignTop="@+id/tunebarRv"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="-20dp"
+                    android:background="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_id"
+            android:layout_width="300dp"
+            android:layout_height="320dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/cardview"
+            app:cardBackgroundColor="@color/cardview_Background"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_alignLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/channel_headline"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="@string/above_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/camila_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/screenView_layout"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/cardview_Background"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/drop_iv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/channel_headline"
+                    app:layout_constraintVertical_bias="0.53"
+                    tools:ignore="MissingClass">
+
+                    <ImageView
+                        android:id="@+id/screenView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/desc"
+                        android:scaleType="centerCrop" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/hd_channel_rv"
+                    android:layout_width="270dp"
+                    android:layout_height="270dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/drop_iv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.53" />
+
+                <ImageView
+                    android:id="@+id/drop_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cardview"
+                    android:contentDescription="@string/desc"
+                    android:inputType="none"
+                    android:padding="5dp"
+                    android:visibility="invisible"
+                    android:src="@drawable/ic_baseline_down_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_barlayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerImageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="@dimen/cardview_compat_inset_shadow"
+            android:paddingVertical="2dp"
+            >
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_Background"
+        android:foregroundGravity="center"
+        app:itemIconTint="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu"
+        tools:layout_editor_absoluteX="0dp">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

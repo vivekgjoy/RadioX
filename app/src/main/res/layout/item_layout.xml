@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="18.255dp"
+    android:layout_height="80dp"
+    android:backgroundTint="@color/tunebar_Background">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/artist_name"
+            android:text="@string/channel_number"
+            android:textSize="7dp"
+            android:textColor="#00bfff"
+            android:visibility="gone"
+            android:paddingVertical="5dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="#00bfff"
+            />
+<!--        <View-->
+<!--            android:layout_width="1dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:background="#00bfff"-->
+<!--            android:layout_marginStart="15dp"/>-->
+<!--        <View-->
+<!--            android:layout_width="1dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:background="#00bfff"-->
+<!--            android:layout_marginStart="15dp"/>-->
+<!--        <View-->
+<!--            android:layout_width="1dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:background="#00bfff"-->
+<!--            android:layout_marginStart="15dp"/>-->
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.cardview.widget.CardView>
