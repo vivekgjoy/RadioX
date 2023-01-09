@@ -515,7 +515,6 @@ class HomePageActivity : AppCompatActivity() {
             )
         )
     }
-
     private fun addDataListToRv() {
         channelDataItems.clear()
         channelDataItems.add(
